@@ -1,0 +1,8 @@
+plot(Sub_metering_1,type='n',ylab='Energy sub metering',xaxt='n',xlab="")
+lines(Sub_metering_1,type='lines',col='black')
+lines(Sub_metering_2,type='l',col='red')
+lines(Sub_metering_3,type='l',col='blue')
+legend('topright',lty=1,legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),col=c('black','red','blue'))
+axis(1,at=c(0,1440,2880),labels=c("Thu","Fri","Sat"))
+dev.copy(png,'plot3.png')
+dev.off()
